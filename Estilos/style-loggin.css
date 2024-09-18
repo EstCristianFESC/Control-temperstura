@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #14375d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor {
+    width: 300px;
+    box-shadow: 10px 6px 37px -13px #000000;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    font-weight: 500;
+    background-color: #d9d9d9;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    color: #14375d;
+    border: none;
+    width: 100%;
+    margin-top: 15px;
+}
+input {
+    background-color: #737373;
+    padding: 10px;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+img {
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    background-color: #14375d;
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Para móvil */
+@media (max-width: 480px) {
+    .contenedor {
+        width: 90%;
+        padding: 15px;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+
+    input {
+        padding: 8px;
+    }
+}
+
+/* Para tabletas */
+@media (max-width: 768px) {
+    .contenedor {
+        width: 80%;
+        padding: 18px;
+    }
+
+    button {
+        padding: 14px 25px;
+        font-size: 1.1rem;
+    }
+
+    input {
+        padding: 9px;
+    }
+}
