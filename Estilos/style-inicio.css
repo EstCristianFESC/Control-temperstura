@@ -178,7 +178,7 @@ tr:last-child td {
 }
 
 /* Para Tablet y PC */
-@media (min-width: 768px) {
+@media (min-width: 720px) {
     .grid {
         grid-template-areas:
             "header header"
