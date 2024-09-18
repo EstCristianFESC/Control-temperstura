@@ -2,12 +2,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
 }
 
 /* Grid principal */
 .grid {
     display: grid;
-    gap: 20px;
+    gap: 10px; /* Reduce el espacio entre los elementos */
     grid-template-areas:
         "header"
         "main1"
@@ -25,7 +26,7 @@ body {
     align-items: center;
     background-color: #14375d;
     color: #ffffff;
-    padding: 0 20px;
+    padding: 10px; /* Ajusta el padding para móviles */
     box-sizing: border-box;
 }
 
@@ -46,10 +47,9 @@ body {
     border: 1px solid #dddddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 15px; /* Ajusta el padding */
     color: #14375d;
-    margin: 20px;
-    min-height: 100px;
+    margin: 10px; /* Añade un margen para que no toque los bordes de la pantalla */
     box-sizing: border-box;
     text-align: center;
 }
@@ -62,9 +62,9 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     color: #14375d;
-    margin: auto;
-    width: 100%; /* Cambiado a 100% para mayor adaptabilidad */
-    max-width: 80%;
+    margin: 10px; /* Añade un margen para que no toque los bordes de la pantalla */
+    width: 100%; /* Cambiado a 100% para mejor adaptabilidad */
+    max-width: 100%;
     box-sizing: border-box;
     text-align: left;
     grid-area: main3;
@@ -80,7 +80,7 @@ body {
 }
 
 .main3 img {
-    width: 40px; /* Ajusta el tamaño de la imagen */
+    width: 40px;
     height: auto;
 }
 
@@ -92,7 +92,7 @@ body {
 
 /* Estilo para la caja de texto */
 input[type="text"] {
-    width: 100%; /* Cambiado a 100% para mejor adaptabilidad */
+    width: 100%;
     padding: 10px;
     border: 1px solid #dddddd;
     border-radius: 8px;
@@ -113,7 +113,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
     margin-top: 10px;
-    width: 100%; /* Cambiado a 100% para mejor adaptabilidad */
+    width: 100%; /* Asegura que el botón ocupe el 100% del ancho disponible */
 }
 
 button:hover {
@@ -126,6 +126,8 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    border-spacing: 0; /* Asegura que no haya espacio entre celdas */
+    border-radius: 8px;
 }
 
 th, td {
@@ -156,24 +158,20 @@ tr:last-child td {
 /* Ajustes para dispositivos más pequeños */
 @media (max-width: 767px) {
     .header {
-        padding: 0 10px;
+        padding: 10px; /* Ajusta el padding */
     }
 
     .imagenes img {
         width: 20px;
     }
 
-    .main1, .main2 {
-        margin: 10px;
+    .main1, .main2, .main3 {
+        margin: 10px; /* Ajusta el margen para móviles */
     }
 
     button {
         padding: 8px 16px;
         font-size: 14px;
-    }
-
-    .main3 {
-        width: 90%;
     }
 }
 
