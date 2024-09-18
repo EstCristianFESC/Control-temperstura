@@ -63,7 +63,7 @@ body {
     padding: 20px;
     color: #14375d;
     margin: auto;
-    width: 50%;
+    width: 100%; /* Cambiado a 100% para mayor adaptabilidad */
     max-width: 80%;
     box-sizing: border-box;
     text-align: left;
@@ -80,7 +80,7 @@ body {
 }
 
 .main3 img {
-    width: 40px;
+    width: 40px; /* Ajusta el tamaño de la imagen */
     height: auto;
 }
 
@@ -92,7 +92,7 @@ body {
 
 /* Estilo para la caja de texto */
 input[type="text"] {
-    width: 50%;
+    width: 100%; /* Cambiado a 100% para mejor adaptabilidad */
     padding: 10px;
     border: 1px solid #dddddd;
     border-radius: 8px;
@@ -113,7 +113,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
     margin-top: 10px;
-    width: 50%;
+    width: 100%; /* Cambiado a 100% para mejor adaptabilidad */
 }
 
 button:hover {
@@ -124,9 +124,7 @@ button:hover {
 /* Estilos generales para la tabla */
 table {
     width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    border-radius: 8px;
+    border-collapse: collapse;
     margin-top: 20px;
 }
 
