@@ -2,23 +2,20 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
 }
 
-/* Grid principal */
 .grid {
     display: grid;
-    gap: 10px; /* Reduce el espacio entre los elementos */
+    gap: 20px;
     grid-template-areas:
-        "header"
-        "main1"
-        "main2"
-        "main3";
+    "header"
+    "main1"
+    "main2"
+    "main3";
     grid-template-columns: 1fr;
     grid-template-rows: auto;
 }
 
-/* Encabezado */
 .header {
     grid-area: header;
     display: flex;
@@ -26,11 +23,14 @@ body {
     align-items: center;
     background-color: #14375d;
     color: #ffffff;
-    padding: 10px; /* Ajusta el padding */
+    padding: 0 20px;
     box-sizing: border-box;
 }
 
-/* Estilo de imágenes del header */
+.titulo {
+    flex: 1;
+}
+
 .imagenes {
     display: flex;
     gap: 10px;
@@ -41,20 +41,20 @@ body {
     height: auto;
 }
 
-/* Tarjetas principales */
+/* Estilo general para las tarjetas */
 .main1, .main2 {
     background-color: #ffffff;
     border: 1px solid #dddddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px; /* Ajusta el padding */
+    padding: 20px;
     color: #14375d;
-    margin: 0 5px; /* Añade un margen a los lados */
+    margin: 20px;
+    min-height: 100px;
     box-sizing: border-box;
     text-align: center;
 }
 
-/* Tarjeta principal con flexbox */
 .main3 {
     background-color: #ffffff;
     border: 1px solid #dddddd;
@@ -62,13 +62,14 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     color: #14375d;
-    margin: 0 5px; /* Añade un margen a los lados */
-    width: calc(100% - 10px); /* Ajusta el ancho considerando el margen */
+    margin: auto;
+    width: 50%;
+    max-width: 80%;
     box-sizing: border-box;
     text-align: left;
     grid-area: main3;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Alinea los elementos en columna, pero afecta solo a los hijos directos */
     align-items: center;
 }
 
@@ -79,26 +80,26 @@ body {
 }
 
 .main3 img {
-    width: 40px;
+    width: 40px; /* Ajusta el tamaño de la imagen */
     height: auto;
 }
 
 .main3 h2, .main3 p {
     margin: 0;
     padding: 5px 0;
-    text-align: center;
+    text-align: center; /* Alineación centrada del texto */
 }
 
 /* Estilo para la caja de texto */
 input[type="text"] {
-    width: calc(100% - 20px); /* Ajusta el ancho considerando el padding y margen */
+    width: 50%;
     padding: 10px;
     border: 1px solid #dddddd;
     border-radius: 8px;
     font-size: 16px;
     color: #14375d;
     box-sizing: border-box;
-    margin: 0 5px 10px 5px; /* Añade un margen a los lados */
+    margin-bottom: 10px;
 }
 
 /* Estilo para el botón */
@@ -111,10 +112,11 @@ button {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
-    margin: 0 5px 10px 5px; /* Añade un margen a los lados */
-    width: calc(100% - 10px); /* Ajusta el ancho considerando el margen */
+    margin-top: 10px;
+    width: 50%;
 }
 
+/* Estilo para el botón cuando el usuario pasa el ratón sobre él */
 button:hover {
     background-color: #0d2a4d;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -122,18 +124,16 @@ button:hover {
 
 /* Estilos generales para la tabla */
 table {
-    width: calc(100% - 10px); /* Ajusta el ancho considerando el margen */
+    width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    border-spacing: 0; /* Asegura que no haya espacio entre celdas */
-    border-radius: 8px;
 }
 
 th, td {
     border: 1px solid #dddddd;
+    border-radius: 8px;
     padding: 12px;
     text-align: center;
-    border-radius: 8px;
 }
 
 th {
@@ -157,31 +157,30 @@ tr:last-child td {
 /* Ajustes para dispositivos más pequeños */
 @media (max-width: 767px) {
     .header {
-        padding: 10px;
+        padding: 0 10px;
     }
 
     .imagenes img {
         width: 20px;
     }
 
-    .main1, .main2, .main3 {
-        margin: 0 5px; /* Ajusta el margen para móviles */
+    .main1, .main2 {
+        margin: 10px;
     }
 
     button {
         padding: 8px 16px;
         font-size: 14px;
-        margin: 0 5px; /* Añade un margen a los lados */
     }
 }
 
 /* Para Tablet y PC */
-@media (min-width: 720px) {
+@media (min-width: 768px) {
     .grid {
         grid-template-areas:
-            "header header"
-            "main1 main2"
-            "main3 main3";
+        "header header"
+        "main1 main2"
+        "main3 main3";
         grid-template-columns: 1fr 1fr;
     }
 }
